@@ -1,4 +1,4 @@
-import { GET_COUNTRY_DATA_SUCCESS, GET_COUNTRY_DATA_ERROR, GET_WEATHER_DATA_SUCCESS, GET_WEATHER_DATA_ERROR } from './constants';
+import { GET_COUNTRY_DATA_SUCCESS, GET_COUNTRY_DATA_ERROR, GET_WEATHER_DATA_SUCCESS, GET_WEATHER_DATA_ERROR, CLEAR_DATA } from './constants';
 
 const accesKey = '7e18be6f8eeada887513c05daf115648';
 
@@ -19,3 +19,5 @@ export const getWeather = (city) => {
             .catch((error) => dispatch({ type: GET_WEATHER_DATA_ERROR, payload: error}));
     };
 };
+
+export const clearData = () => ({ type: CLEAR_DATA })

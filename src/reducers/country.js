@@ -1,4 +1,4 @@
-import { GET_COUNTRY_DATA_SUCCESS, GET_COUNTRY_DATA_ERROR, GET_WEATHER_DATA_ERROR, GET_WEATHER_DATA_SUCCESS } from 'actions/constants';
+import { GET_COUNTRY_DATA_SUCCESS, GET_COUNTRY_DATA_ERROR, GET_WEATHER_DATA_ERROR, GET_WEATHER_DATA_SUCCESS, CLEAR_DATA } from 'actions/constants';
 
 const initialState = {
     data: null,
@@ -26,6 +26,9 @@ export default (state = initialState, action) => {
                 ...state,
                 weather: action.payload,
             };
+
+        case CLEAR_DATA:
+            return initialState;
 
         default:
             return state;

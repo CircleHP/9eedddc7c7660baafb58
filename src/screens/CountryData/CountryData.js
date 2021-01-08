@@ -36,6 +36,10 @@ const CountryData = () => {
         if(weatherData) {
             setWeatherShown(true);
         };
+
+        return () => {
+            actions.clearData()
+        }
     }, [weatherData])
 
     return (
